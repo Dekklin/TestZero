@@ -25,16 +25,17 @@
     * A .gitignore essentially tells your **git add** to not add files that is in EVERY C# program.... files that contain the 1's and 0's on strings and int's and what makes VSC do stuff.... Its like 20mb of stuff and can get way bigger the more programs you add. It also makes **Git push** like 10 seconds faster so theres that.
 2) So I'm a little not too sure about what pushpinder wants us to do here but I'm just going to combine my goto with her methods and see how she likes it
 3) So in bash make your way to that folder, you should see a Readme and the .gitignore
-4) In Bash type 'dotnet new console'
+
+5) Now pushpinder is doing something odd, I think.... I believe she's setting up a solution, which is used for building multiple programs in one project. But right now it looks like we're only going to have one project in the sln (solution) to me thats like making a folder to hold 1 file.
+6) Seems like pushpinder also wants us to seperate our files so make directories (mkdir) called App, Lib, and Data
+7) In Bash type **dotnet new sln**
+8) In Bash type **dotnet new -o App**
+   * This is where your main.cs or Program.cs is going to live
+   * This tells bash to install files that are mandatory for a C# project to work within a console/terminal
+9) In Bash type **dotnet new classlib -o Lib** and again for Data **dotnet new classlib -o Data**
+10) In Bash type 'dotnet new console'
     * This tells bash to install files that are mandatory for a C# project to work within a console/terminal
     * By the way I like to think of bash as like a terminal thats connected with the internet, VERY COOL!! (dont answer that in an interview)
-5) Now pushpinder is doing something odd, I think.... I believe she's setting up a solution, which is used for building multiple programs in one project. But right now it looks like we're only going to have one project in the sln (solution) to me thats like making a folder to hold 1 file.
-6) In Bash type *dotnet new sln
-    * optional for visual purposes type **ls** in bash
-7) In Bash type 'dotnet sln File_Name.sln add File_Name.csproj'
-    * this attaches that specific project to the solution
-    * NOT EXACTLY SURE IF IT DOES THIS BUT I BELIEVE THIS ALLOWS YOU TO USE 'USING obj' AT THE TOP OF A CLASS FROM OTHER PROJECTS
-8) Seems like pushpinder also wants us to seperate our files so make directories (mkdir) called 
 
 ### Last Touches to Hello World
 1) In bash I like to change my directory so I see the folder everything is in
